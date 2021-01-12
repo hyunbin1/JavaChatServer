@@ -6,8 +6,6 @@ import java.util.concurrent.ExecutorService;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 
 
 public class Main extends Application {
@@ -23,19 +21,18 @@ public class Main extends Application {
 		
 	}
 	
-	@Override
-	public void start(Stage primaryStage) {
-		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+	// 서버 작동을 중지시키는 메소드입니다. 
+	public void stopServer() {
+		
 	}
 	
+	// UI를 생성하고, 실질적으로 프로그램을 동작시키는 메소드입니다. 
+	@Override
+	public void start(Stage primaryStage) {
+		
+	}
+	
+	// 프로그램의 진입점입니다. 
 	public static void main(String[] args) {
 		launch(args);
 	}
